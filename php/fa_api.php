@@ -3,13 +3,17 @@
 // Values we'll need through the process
 $CLIENT_ID="xxxx"; // Issued by FormAssembly host
 $CLIENT_SECRET="xxxx"; // Issued by FormAssembly host
-$RETURN_URL= (!empty($_SERVER['HTTPS'])) ? "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] : "http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; // Auto generate our return url for wherever this page is located.
-$AUTH_ENDPOINT="https://xxxxxx/oauth/login"; // Replace xxxxxx with correct url
-$TOKEN_REQUEST_ENDPOINT="https://xxxxxx/oauth/access_token"; // Replace xxxxxx with correct url
+// Auto generate our return url for wherever this page is located.
+$RETURN_URL= (!empty($_SERVER['HTTPS'])) ? "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] : "http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+// Replace xxxxxx with correct url
+$AUTH_ENDPOINT="https://xxxxxx/oauth/login"; 
+// Replace xxxxxx with correct url
+$TOKEN_REQUEST_ENDPOINT="https://xxxxxx/oauth/access_token";
 
 // Set our API Endpoint
 // https://server/api_v1/forms/index.xml
-$API_REQUEST="https://xxxxxx/api_v1/forms/index.json"; // Replace xxxxxx with correct url
+// Replace xxxxxx with correct url
+$API_REQUEST="https://xxxxxx/api_v1/forms/index.json"; 
 
 
 
@@ -35,7 +39,6 @@ $TOKEN_REQUEST_DATA=array("grant_type"=>"authorization_code",
 			  "redirect_uri"=>$RETURN_URL,
 			  "code"=>$CODE
 		);
-
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $TOKEN_REQUEST_ENDPOINT);
 curl_setopt($ch, CURLOPT_POST, 1);
