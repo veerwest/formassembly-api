@@ -2,7 +2,7 @@
 
 ### Introduction:
 
-FormAssembly exposes an [OAuth2] authenticated API.  Using this API, you can write applications which will interact with the accounts of users who grant your application permission.  OAuth interactions can be complicated, so if you're not familiar with OAuth2, please read a document such as [this one from Google] explaining how OAuth2 works in detail.
+FormAssembly exposes an [OAuth2](http://oauth.net/2/) authenticated API.  Using this API, you can write applications which will interact with the accounts of users who grant your application permission.  OAuth interactions can be complicated, so if you're not familiar with OAuth2, please read a document such as [this one from Google] explaining how OAuth2 works in detail.
 
 The key point of OAuth2 is that it allows a 'user' of FormAssembly, let's call them Adam, to authorize you (a 'client') to take actions in FormAssembly as if you were Adam.  As an example, you could write an application which when authorized by Adam, could download and display a list of all of Adam's forms in FormAssembly along with their associated number of responses, drop-out rate, etc.  This data could then be used by you to generate custom metrics for Adam, or stored for later use, etc.
 
@@ -72,10 +72,12 @@ Several output formats are accepted, see [Endpoints] for more details.
 
 FormAssembly supports returning data in two main formats:
 
-  + [json]: a lightweight data exchange format supported by newer languages.  Directly parsable by Javascript.
-  + [xml]:  an industry standard data exchange format, parsable by almost all languages.
-And some end-points support a third:
-  + [plist]: used to provide Apple consumable data for Objective-C applications
+  + [json](http://en.wikipedia.org/wiki/Json): a lightweight data exchange format supported by newer languages.  Directly parsable by Javascript.
+  + [xml](http://en.wikipedia.org/wiki/XML):  an industry standard data exchange format, parsable by almost all languages.
+And some end-points support additional including:
+  + [plist](http://en.wikipedia.org/wiki/Plist): used to provide Apple consumable data for Objective-C applications
+  + [csv](http://en.wikipedia.org/wiki/Comma-separated_values): used as a standard record data exchange format.
+  + [zip](http://en.wikipedia.org/wiki/ZIP_(file_format)): a binary data container format.
 
 #### Forms: [Returned Fields Reference]
 
