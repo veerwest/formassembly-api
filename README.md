@@ -77,7 +77,7 @@ FormAssembly supports returning data in two main formats:
 And some end-points support additional including:
   + [plist](http://en.wikipedia.org/wiki/Plist): used to provide Apple consumable data for Objective-C applications
   + [csv](http://en.wikipedia.org/wiki/Comma-separated_values): used as a standard record data exchange format.
-  + [zip](http://en.wikipedia.org/wiki/ZIP_(file_format)): a binary data container format.
+  + [zip](http://en.wikipedia.org/wiki/ZIP_(file_format\)): a binary data container format.
 
 #### Forms: [Returned Fields Reference]
 
