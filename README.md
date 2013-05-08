@@ -95,10 +95,10 @@ Returns a list of all forms in the FormAssembly instance.  Only accessible if us
 
 Code Examples:
 
- + PHP:
- + Python ( command line ):
- + Bash ( command line ):
- + Salesforce:
+ + PHP: https://github.com/veerwest/formassembly-api/blob/master/php/fa_api.php
+ + Python ( command line ): https://github.com/veerwest/formassembly-api/blob/master/python/fa_api.py
+ + Bash ( command line ): https://github.com/veerwest/formassembly-api/blob/master/curl/fa_api.sh
+ + Salesforce: https://github.com/drewbuschhorn/sfdc-oauth-playground/tree/oauth2_drew
 
 
 #### Responses: [Returned Fields Reference]
