@@ -61,9 +61,9 @@ will result in a JSON formatted list of the forms in the user ('Adam')'s account
         }}
     }]}
 
-For an explanation of each field, please see [Object reference].
+For an explanation of each field, please see [Object Reference](#object-reference).
 
-Several output formats are accepted, see [Endpoints] for more details.
+Several output formats are accepted, see [End Points](#end-points) for more details.
 
 
 ### End Points:
@@ -168,7 +168,7 @@ Integer specifying whether or not the form is shared as a template publicly.
 Values:
 
  + 0  – Not a template
- + >1 – Is a template ( contact Support for more details )
+ + >1 – Is a template (Contact Support for more details)
 
 Example: 0 
 
@@ -185,7 +185,7 @@ Example: 2
 ***
 "moderation_status":"XXXX",
 
-Integer specifying whether or not the form is moderated ( under review for suspicious content ). Values:
+Integer specifying whether or not the form is moderated (under review for suspicious content). Values:
 
   + 0 – Not checked
   + 2 – Reviewed and approved
@@ -196,7 +196,7 @@ Example: 0
 ***
 "use_ssl":"XXXX",
 
-Integer representing if the form must be displayed over HTTPS.  If true, form url must contain https:// .
+Integer representing if the form must be displayed over HTTPS.  If true, form URL must contain https:// .
 
 ***
  + "created":"XXXXXXXX"
