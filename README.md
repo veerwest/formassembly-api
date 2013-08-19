@@ -218,7 +218,7 @@ Examples:
 If you are developing for an existing Enterprise instance you will need to self-register your app by following the instructions below. 
 
 1. Login to your Enterprise account as an admin
-2. Navigate to the **Admin** Tab ![Step1](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step1.png) 
-3. On the Application Settings page, navigate to the **User Settings** Tab ![Step2](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step2.png)
+2. Navigate to the **Admin** tab ![Step1](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step1.png) 
+3. On the Application Settings page, navigate to the **User Settings** tab ![Step2](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step2.png)
 4. Click "Register a new application" ![Step3](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step3.png)
 5. Pick a name for your new application and take note of your Oauth credentials ![Step4](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step4.png)
