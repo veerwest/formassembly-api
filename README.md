@@ -211,6 +211,7 @@ Examples:
  + "modified":"2012-06-17 17:50:12"
  + "expired":null
 
+***
 
 ### Self-register your app on an existing Enterprise instance
 
