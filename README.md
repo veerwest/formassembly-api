@@ -210,3 +210,12 @@ Examples:
  + "created":"1983-01-01 23:59:59"
  + "modified":"2012-06-17 17:50:12"
  + "expired":null
+
+
+### Self-register your app on an existing Enterprise instance
+
+    1. Login to your Enterprise account as an admin
+    2. Navigate to the Admin Tab
+    3. On Application Settings page, navigate to the User Settings Tab
+    4. Click register a new application
+    5. Pick a name for your new application
