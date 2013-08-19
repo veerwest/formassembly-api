@@ -212,7 +212,9 @@ Examples:
  + "expired":null
 
 
-## Self-register your app on an existing Enterprise instance
+### Self-register your app on an existing Enterprise instance
+
+If you are developing for an existing Enterprise instance you will need to self-register your app by following the instructions below. 
 
 1. Login to your Enterprise account as an admin
 2. Navigate to the Admin Tab
