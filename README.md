@@ -2,13 +2,12 @@
 
 ### Introduction:
 
-[FormAssembly.com](http://formassembly.com) is a web-based form management solution that allows anyone to easily create online forms and collect data.  FormAssembly is available in different flavors, cloud-hosted (SaaS) or on-premise, and all editions provides a secure REST API for interacting with user accounts and exporting data.
+[FormAssembly.com](http://formassembly.com) is a web-based form management solution that allows anyone to easily create online forms and collect data.  FormAssembly is available in different flavors, cloud-hosted (SaaS) or on-premise, and all editions provide a secure REST API for interacting with user accounts and exporting data.
 
 Before you can start building an application using the FormAssembly API, check out [the FormAssembly Developer Hub](http://www3.formassembly.com/api/) for information on how to register, obtain a CLIENT_ID and get access to a sandbox.
 
 
 
- [OAuth2](http://oauth.net/2/) authenticated API.  Using this API, you can write applications which will interact with the accounts of users who grant your application permission.  
 
 ### Endpoint:
 
