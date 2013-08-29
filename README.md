@@ -59,7 +59,7 @@ Execute a HTTP request *from your server* (do *not* direct the user) to request 
 
  + URL: https://app.formassembly.com/oauth/access_token
  + HTTP Method: POST
- + Post Data
+ + Post Data:
 
 
  | Parameter name | value  | Comment
@@ -93,12 +93,11 @@ https://app.formassembly.com/api_v1/forms/index.json?access_token=ACCESS_TOKEN
 
 The URL is composed of the following parts:
 
-
- | https://app.formassembly.com/ | The FormAssembly instance |
- | api_v1 | The API version in use. As changes are made to the API, new version can be released, under api_v2, api_v3, etc. |
- | forms/index | The requested data (see API Reference below) |
- | json | The requested format for the response |
- | ACCESS_TOKEN | The token received in step 3. of the Authorization process |
+ + `https://app.formassembly.com/` : The FormAssembly instance 
+ + `api_v1` : The API version in use. As changes are made to the API, new version can be released, under api_v2, api_v3, etc. 
+ + `forms/index` : The requested data (see API Reference below) 
+ + `json` : The requested format for the response 
+ + `ACCESS_TOKEN` : The token received in step 3. of the Authorization process 
 
 
 #### Response 
