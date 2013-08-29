@@ -61,11 +61,11 @@ Execute a HTTP request *from your server* (do *not* direct the user) to request 
  +    HTTP Method: POST
  +   Post Data:
 
-  | grant_type | authorization_code | |
-  | type | web_server | |
-  |client_id | CLIENT_ID| use your unique client application id issued by FormAssembly |
-  | client_secret | CLIENT_SECRET |  use your unique client application secret issued by FormAssembly |
-  | redirect_uri | RETURN_URL | the same RETURN_URL used in step 1 |
+  | grant_type | authorization_code | use this value as-is |
+  | type | web_server | use this value as-is |
+  | client_id | CLIENT_ID | use your unique client application id issued by FormAssembly |
+  | client_secret | CLIENT_SECRET | use your unique client application secret issued by FormAssembly |
+  | redirect_uri | RETURN_URL | the same RETURN_URL used in step 1. |
   | code | CODE | the code parameter you obtained in step 2. |
 
 
