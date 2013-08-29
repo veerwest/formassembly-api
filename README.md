@@ -58,15 +58,15 @@ Retrieve the code from the query string, you will need it to obtain the Access T
 Execute a HTTP request *from your server* (do *not* direct the user) to request an Access Token.
 
  + URL: https://app.formassembly.com/oauth/access_token
- +    HTTP Method: POST
- +   Post Data:
+ + HTTP Method: POST
+ + Post Data:
 
-  | grant_type | authorization_code | use this value as-is |
-  | type | web_server | use this value as-is |
-  | client_id | CLIENT_ID | use your unique client application id issued by FormAssembly |
-  | client_secret | CLIENT_SECRET | use your unique client application secret issued by FormAssembly |
-  | redirect_uri | RETURN_URL | the same RETURN_URL used in step 1. |
-  | code | CODE | the code parameter you obtained in step 2. |
+| grant_type | authorization_code | use this value as-is |
+| type | web_server | use this value as-is |
+| client_id | CLIENT_ID | use your unique client application id issued by FormAssembly |
+| client_secret | CLIENT_SECRET | use your unique client application secret issued by FormAssembly |
+| redirect_uri | RETURN_URL | the same RETURN_URL used in step 1. |
+| code | CODE | the code parameter you obtained in step 2. |
 
 
 The response to this request will be a JSON array like so:
