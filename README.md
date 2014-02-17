@@ -1,6 +1,7 @@
 ## The FormAssembly API
 
 ### Introduction
+/* test comment */
 
 [FormAssembly.com](http://formassembly.com) is a web-based form management solution that allows anyone to easily create online forms and collect data. FormAssembly is available in different flavors, cloud-hosted (SaaS) or on-premises, and all editions provide a secure REST API for interacting with user accounts and exporting data.
 
@@ -139,7 +140,7 @@ FormAssembly supports returning data in two main formats:
 Some endpoints support additional formats, including:
   + [plist](http://en.wikipedia.org/wiki/Plist): Used to provide Apple consumable data for Objective-C applications.
   + [csv](http://en.wikipedia.org/wiki/Comma-separated_values): Used as a standard record data exchange format.
-  + [zip](http://en.wikipedia.org/wiki/ZIP_(file_format\)): A binary data container format.
+
 
 ***
 
@@ -172,7 +173,7 @@ Returns a list of all forms in the FormAssembly instance. Only accessible if usi
 + https://app.formassembly.com/api_v1/responses/export/#FORMID#.csv
 + https://app.formassembly.com/api_v1/responses/export/#FORMID#.json
 + https://app.formassembly.com/api_v1/responses/export/#FORMID#.xml
-+ https://app.formassembly.com/api_v1/responses/export/#FORMID#.zip
+
 
 ##### Additional Parameters
 + `date_from`: Start date for export range.
