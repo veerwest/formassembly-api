@@ -17,7 +17,7 @@ AUTH_URI=AUTH_ENDPOINT+"?type=web&client_id="+CLIENT_ID+"&redirect_uri="+RETURN_
 
 ## Since we're on the commandline, display authorization url to user ('Adam').
 print "Go to URL: "+AUTH_URI
-print "When directed to https://localhost/?code=XXXXXXXXXX copy and paste code here:\n"
+print "When directed to https://localhost/?code=XXXXXXXXXX copy and paste code here: (do not include the ending #)\n"
 
 code = raw_input("CODE>")
 #Decode any URL encoded values
