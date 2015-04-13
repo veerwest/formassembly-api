@@ -235,6 +235,49 @@ Delete form.  Expects the additional parameters listed above to be sent as POST.
 
 ***
 
+#### Connectors
+
+##### Index
++ https://app.formassembly.com/api_v1/connectors/index/#FORMID#.json
++ https://app.formassembly.com/api_v1/connectors/index/#FORMID#.xml
+
+Returns a list of the connectors associated with form #FORMID#.
+
+##### View
+ + https://app.formassembly.com/admin/api_v1/connectors/view/#CONNECTORNAME#/#CONNECTORID#.json
+ + https://app.formassembly.com/admin/api_v1/connectors/view/#CONNECTORNAME#/#CONNECTORID#.xml
+
+Return an encoded copy of the connectors's definition in XML or JSON.  #CONNECTORNAME# must match
+the #CONNECTORID#.  Both can be retrieved from the api_v1/connectors/index/#FORMID# call.
+
+##### Create
+ + https://app.formassembly.com/admin/api_v1/connectors/create/#CONNECTORNAME#/#CONNECTORID#.json
+ + https://app.formassembly.com/admin/api_v1/connectors/create/#CONNECTORNAME#/#CONNECTORID#.xml
+
+##### Additional Parameters (POST only)
++ `event`: string, indicating the stage the connector is run: "beforerender" - before form is displayed to user,"before_save" - when form is saved by user, "interactive" - after form is completed, "background" - after user is shown the form's thank-you page. 
+
+Create a new connector.  Expects the additional parameters listed above to be sent as POST.
+
+##### Edit
+ + https://app.formassembly.com/admin/api_v1/connectors/edit/#CONNECTORNAME#/#CONNECTORID#.json
+ + https://app.formassembly.com/admin/api_v1/connectors/edit/#CONNECTORNAME#/#CONNECTORID#.xml
+
+##### Additional Parameters (POST only)
++ `mapping`: data to set as connector mapping.
++ `login`: login data for the connector service.
++ `password`: password data for the connector service.
+
+Send update to connector code.  Expects the additional parameters listed above to be sent as POST.
+
+##### Delete
+ + https://app.formassembly.com/admin/api_v1/connectors/delete/#CONNECTORNAME#/#CONNECTORID#.json
+ + https://app.formassembly.com/admin/api_v1/connectors/delete/#CONNECTORNAME#/#CONNECTORID#.xml
+
+Delete connector.
+
+***
+
 #### Object Reference
 
 ##### Form
