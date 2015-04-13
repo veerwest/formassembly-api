@@ -145,17 +145,64 @@ Some endpoints support additional formats, including:
 
 #### Forms [Returned Fields Reference]
 
+##### Admin Index (Enterprise Plan only)
+ + https://app.formassembly.com/admin/api_v1/forms/index.json
+ + https://app.formassembly.com/admin/api_v1/forms/index.xml
+
+Returns a list of all forms in the FormAssembly instance. Only accessible if using FormAssembly Enterprise and an access token from an admin-level user.
+
 ##### Index
 + https://app.formassembly.com/api_v1/forms/index.json
 + https://app.formassembly.com/api_v1/forms/index.xml
 
 Returns a list of the forms in the user's account, along with associated metadata.
 
-##### Admin Index (Enterprise Plan only)
- + https://app.formassembly.com/admin/api_v1/forms/index.json
- + https://app.formassembly.com/admin/api_v1/forms/index.xml
+##### View
+ + https://app.formassembly.com/admin/api_v1/forms/view/#FORMID#.json
+ + https://app.formassembly.com/admin/api_v1/forms/view/#FORMID#.xml
 
-Returns a list of all forms in the FormAssembly instance. Only accessible if using FormAssembly Enterprise and an access token from an admin-level user.
+##### Additional Parameters
++ `raw`: Bypass form XML element whitelisting.
+
+Return an encoded copy of the form's definition in XML or JSON.  `Raw` parameter will cause 
+the returned output to be exactly the content stored by FormAssembly including obsolete or 
+internal fields.  Generally you should not use the `raw` parameter.
+
+##### Create
+ + https://app.formassembly.com/admin/api_v1/forms/create.json
+ + https://app.formassembly.com/admin/api_v1/forms/create.xml
+
+##### Additional Parameters (POST only)
++ `xml_data`: xml data formatted per FormAssembly's schema.  See output of api_v1/forms/view.
++ `builder_version`: string identifier, e.g. "3.4.2","4.0.0","4.0.1","4.1.0","4.2.0".
++ `language`: iso language code, e.g. "en-US","fr","zh-CN"
++ `name`: string text of the preferred internal application display name.
+
+Create a new form.  Expects the additional parameters listed above to be sent as POST.
+
+##### Edit
+ + https://app.formassembly.com/admin/api_v1/forms/edit/#FORMID#.json
+ + https://app.formassembly.com/admin/api_v1/forms/edit/#FORMID#.xml
+
+##### Additional Parameters (POST only)
++ `id`: id for existing form.
++ `xml_data`: xml data formatted per FormAssembly's schema.  See output of api_v1/forms/view.
++ `builder_version`: string identifier, e.g. "3.4.2","4.0.0","4.0.1","4.1.0","4.2.0".
++ `language`: iso language code, e.g. "en-US","fr","zh-CN"
++ `name`: string text of the preferred internal application display name.
+
+Send update to form code.  Expects the additional parameters listed above to be sent as POST.
+
+##### Delete
+ + https://app.formassembly.com/admin/api_v1/forms/delete/#FORMID#.json
+ + https://app.formassembly.com/admin/api_v1/forms/delete/#FORMID#.xml
+
+##### Additional Parameters (POST only)
++ `id`: id for existing form.
+
+Delete form.  Expects the additional parameters listed above to be sent as POST.
+
+
 
 ##### Code Examples
 
