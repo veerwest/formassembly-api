@@ -244,24 +244,23 @@ Delete form.  Expects the additional parameters listed above to be sent as POST.
 Returns a list of the connectors associated with form #FORMID#.
 
 ##### View
- + https://app.formassembly.com/admin/api_v1/connectors/view/#CONNECTORNAME#/#CONNECTORID#.json
- + https://app.formassembly.com/admin/api_v1/connectors/view/#CONNECTORNAME#/#CONNECTORID#.xml
+ + https://app.formassembly.com/admin/api_v1/connectors/view/#CONNECTORID#.json
+ + https://app.formassembly.com/admin/api_v1/connectors/view/#CONNECTORID#.xml
 
-Return an encoded copy of the connectors's definition in XML or JSON.  #CONNECTORNAME# must match
-the #CONNECTORID#.  Both can be retrieved from the api_v1/connectors/index/#FORMID# call.
+Return an encoded copy of the connectors's definition in XML or JSON. #CONNECTORID# can be retrieved from the api_v1/connectors/index/#FORMID# call.
 
 ##### Create
- + https://app.formassembly.com/admin/api_v1/connectors/create/#CONNECTORNAME#/#CONNECTORID#.json
- + https://app.formassembly.com/admin/api_v1/connectors/create/#CONNECTORNAME#/#CONNECTORID#.xml
+ + https://app.formassembly.com/admin/api_v1/connectors/create/#FORMID#/#CONNECTORNAME#.json
+ + https://app.formassembly.com/admin/api_v1/connectors/create/#FORMID#/#CONNECTORNAME#.xml
 
 ##### Additional Parameters (POST only)
 + `event`: string, indicating the stage the connector is run: "beforerender" - before form is displayed to user,"before_save" - when form is saved by user, "interactive" - after form is completed, "background" - after user is shown the form's thank-you page. 
 
-Create a new connector.  Expects the additional parameters listed above to be sent as POST.
+Create a new connector.  Expects the additional parameters listed above to be sent as POST. #CONNECTORID# can be retrieved from the api_v1/connectors/index/#FORMID# call.
 
 ##### Edit
- + https://app.formassembly.com/admin/api_v1/connectors/edit/#CONNECTORNAME#/#CONNECTORID#.json
- + https://app.formassembly.com/admin/api_v1/connectors/edit/#CONNECTORNAME#/#CONNECTORID#.xml
+ + https://app.formassembly.com/admin/api_v1/connectors/edit/#CONNECTORID#.json
+ + https://app.formassembly.com/admin/api_v1/connectors/edit/#CONNECTORID#.xml
 
 ##### Additional Parameters (POST only)
 + `mapping`: data to set as connector mapping.
@@ -271,8 +270,8 @@ Create a new connector.  Expects the additional parameters listed above to be se
 Send update to connector code.  Expects the additional parameters listed above to be sent as POST.
 
 ##### Delete
- + https://app.formassembly.com/admin/api_v1/connectors/delete/#CONNECTORNAME#/#CONNECTORID#.json
- + https://app.formassembly.com/admin/api_v1/connectors/delete/#CONNECTORNAME#/#CONNECTORID#.xml
+ + https://app.formassembly.com/admin/api_v1/connectors/delete/#CONNECTORID#.json
+ + https://app.formassembly.com/admin/api_v1/connectors/delete/#CONNECTORID#.xml
 
 Delete connector.
 
