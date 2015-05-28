@@ -277,6 +277,99 @@ Delete connector.
 
 ***
 
+#### Themes
+
+##### Index
++ https://app.formassembly.com/api_v1/themes/index/#FORMID#.json
+
+Returns a list of the themes associated with form #FORMID#.
+
+##### View
+ + https://app.formassembly.com/admin/api_v1/themes/view/#THEMEID#.json
+
+Return the theme's definition in raw CSS. #THEMEID# can be retrieved from the api_v1/themes/index/#FORMID# call.  Note this data may contain links to local urls that will not match a new environment.
+
+##### Create
+ + https://app.formassembly.com/admin/api_v1/themes/create.json
+
+##### Additional Parameters (POST only)
++ `name`: string, indicating name of theme
++ `css_data` : string, CSS payload for the theme
+
+Create a new theme.  Expects the additional parameters listed above to be sent as POST.
+
+##### Edit
+ + https://app.formassembly.com/admin/api_v1/themes/edit/#THEMEID#.json
+
+##### Additional Parameters (POST only)
++ `id`: int, id of theme to be edited. 
++ `name`: string, indicating name of theme
++ `css_data` : string, CSS payload for the theme
+
+Send update to theme code.  Expects the additional parameters listed above to be sent as POST.
+
+##### Delete
+ + https://app.formassembly.com/admin/api_v1/themes/delete/#THEMEID#.json
+
+Delete the theme.
+
+***
+
+#### Form Elements
+
+##### Index
++ https://app.formassembly.com/api_v1/form_elements/index.xml
+
+Returns a list of the form elements available to the user.
+
+##### View
+ + https://app.formassembly.com/admin/api_v1/form_elements/view/#ELEMENTID#.xml
+
+Return an XML copy of the element's definition in raw CSS. #ELEMENTID# can be retrieved from the api_v1/form_elements/index.xml call.  Note this data may contain links to local urls that will not match a new environment.
+
+##### Create
+ + https://app.formassembly.com/admin/api_v1/form_elements/create.json
+
+##### Additional Parameters (POST only)
++ `xml_data`: string, XML payload for FormAssembly FormBuilder
++ `name` : string, name for element
++ `comments` : string, TBD
++ `category` : string, system level category, (leave blank by default)
++ `subcategory` : string, user defined category
++ `batch` : int, TBD - leave blank
+
+Create a new form element.  Expects the additional parameters listed above to be sent as POST.
+
+##### Edit
+ + https://app.formassembly.com/admin/api_v1/form_elements/edit/#ELEMENTID#.json
+
+##### Additional Parameters (POST only)
++ `id`: int, id of element to be edited. 
++ `xml_data`: string, XML payload for FormAssembly FormBuilder
++ `name` : string, name for element
++ `comments` : string, TBD
++ `category` : string, system level category, (leave blank by default)
++ `subcategory` : string, user defined category
++ `batch` : int, TBD - leave blank
+
+Send update to element code.  Expects the additional parameters listed above to be sent as POST.
+
+##### Delete
+ + https://app.formassembly.com/admin/api_v1/form_elements/delete/#THEMEID#.json
+
+Delete the element.
+
+***
+
+#### Aggregates
+
+##### Reset_counters
+ + https://app.formassembly.com/admin/api_v1/aggregates/reset_counters/#FORMID#.json
+
+Trigger a reset of the aggregate data counters (unread, read, saved, etc.) that may be out of sync after import runs.
+
+***
+
 #### Object Reference
 
 ##### Form
