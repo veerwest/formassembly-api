@@ -280,9 +280,9 @@ Delete connector.
 #### Themes
 
 ##### Index
-+ https://app.formassembly.com/api_v1/themes/index/#FORMID#.json
++ https://app.formassembly.com/api_v1/themes/index.json
 
-Returns a list of the themes associated with form #FORMID#.
+Returns a list of the themes associated user account.
 
 ##### View
  + https://app.formassembly.com/admin/api_v1/themes/view/#THEMEID#.json
