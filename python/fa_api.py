@@ -12,8 +12,14 @@ TOKEN_REQUEST_ENDPOINT="https://xxxxxx/oauth/access_token" # Replace xxxxxx with
 ## https://server/api_v1/forms/index.xml
 API_REQUEST="https://xxxxxx/api_v1/forms/index" 
 
+## Build the query string
+API_AUTH_QUERY=urllib.urlencode({"type":"web",
+                                 "client_id":CLIENT_ID,
+                                 "redirect_uri":RETURN_URL,
+                                 "response_type":"code"})
+
 ## Build our authorization endpoint to display to user ('Adam')
-AUTH_URI=AUTH_ENDPOINT+"?type=web&client_id="+CLIENT_ID+"&redirect_uri="+RETURN_URL+"&response_type=code"
+AUTH_URI=AUTH_ENDPOINT+"?"+API_AUTH_QUERY
 
 ## Since we're on the commandline, display authorization url to user ('Adam').
 print "Go to URL: "+AUTH_URI
