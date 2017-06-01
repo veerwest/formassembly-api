@@ -84,6 +84,10 @@ The response to this request will be a JSON array, like so:
 
 Store the `access_token` value. You'll need it for every API request on the user account. Since the access token is valid for only one user account, you will typically obtain multiple access_token from multiple users, and you must store and manage those tokens accordingly.
 
+The `refresh_token` is used in a similar way to other OAuth2 implementations - it's used to obtain a renewed access token. Expiration time for access tokens is set to 10 years. [Here](https://auth0.com/learn/refresh-tokens/) is a bit more documentation on refresh tokens.
+
+
+
 ***
 
 ### Example
