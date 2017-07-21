@@ -401,10 +401,10 @@ If you are developing for an existing Enterprise instance, you will need to self
 
 1. Login to your Enterprise account as an admin.
 
-2. Navigate to the **Admin** tab. <div></div> ![Step1](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step1.png) 
+2. Navigate to the **Admin Dashboard** tab. <div></div> ![Step1](https://www.formassembly.com/content/uploads/2017/07/dev-1-admin-dashboard.png) 
 
-3. On the Application Settings page, navigate to the **User Settings** tab.  <div></div> ![Step2](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step2.png)
+3. In the Admin Dashboard, navigate to **Settings > Third Party Apps** on the sidebar menu.  <div></div> ![Step2](https://www.formassembly.com/content/uploads/2017/07/dev-2-third-party-apps.gif)
 
-4. Click "Register a new application." <div></div> ![Step3](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step3.png)
+4. Click "Register a new application." <div></div> ![Step3](https://www.formassembly.com/content/uploads/2017/07/dev-3-register.png)
 
-5. Pick a name for your new application, and take note of your OAuth credentials. <div></div> ![Step4](http://www3.formassembly.com/blog/wp-content/uploads/2013/08/step4.png)
+5. Pick a name for your new application, and take note of your OAuth credentials. <div></div> ![Step4](https://www.formassembly.com/content/uploads/2017/07/dev-4-app-name.gif)
