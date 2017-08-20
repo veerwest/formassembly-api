@@ -1,14 +1,18 @@
 <?php
+/**
+ * @see https://packagist.org/packages/fathershawn/oauth2-formassembly
+ *
+ * Install using composer: composer require fathershawn/oauth2-formassembly
+ */
+
+use Fathershawn\OAuth2\Client\Provider\FormAssembly;
 
 // Values we'll need through the process
 $CLIENT_ID=htmlspecialchars("xxxx"); // Issued by FormAssembly host
 $CLIENT_SECRET=htmlspecialchars("xxxx"); // Issued by FormAssembly host
 // Auto generate our return url for wherever this page is located.
 $RETURN_URL= (!empty($_SERVER['HTTPS'])) ? "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] : "http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-// Replace xxxxxx with correct url
-$AUTH_ENDPOINT="https://xxxxxx/oauth/login"; 
-// Replace xxxxxx with correct url
-$TOKEN_REQUEST_ENDPOINT="https://xxxxxx/oauth/access_token";
+$BASE_URL="https://xxxxxx/"; // The FormAssembly host.
 
 // Set our API Endpoint
 // https://server/api_v1/forms/index.xml
@@ -20,7 +24,13 @@ $API_REQUEST="https://xxxxxx/api_v1/forms/index.json";
 // If user ('Adam') is coming to page for the first time, generate the authorization url
 // and redirect him to it.
 if( empty($_GET) && empty($_POST)){
-	$AUTH_URI="$AUTH_ENDPOINT?type=web&client_id=$CLIENT_ID&redirect_uri=$RETURN_URL&response_type=code";
+  $provider = new FormAssembly([
+    'clientId' => $CLIENT_ID,
+    'clientSecret' => $CLIENT_SECRET,
+    'redirectUri' => $RETURN_URL,
+    'baseUrl' => $BASE_URL,
+  ]);
+  $AUTH_URI = $provider->getAuthorizationUrl();
 	header("Location: $AUTH_URI",TRUE,302);
 }
 
@@ -32,24 +42,16 @@ if( empty($_GET) && empty($_POST)){
 if(!empty($_GET['code'])){
 $CODE = $_GET['code'];
 
-$TOKEN_REQUEST_DATA=array("grant_type"=>"authorization_code",
-			  "type"=>"web_server",
-			  "client_id"=>$CLIENT_ID,
-			  "client_secret"=>$CLIENT_SECRET,
-			  "redirect_uri"=>$RETURN_URL,
-			  "code"=>$CODE
-		);
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $TOKEN_REQUEST_ENDPOINT);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS,$TOKEN_REQUEST_DATA);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-$output = curl_exec($ch); 
-unset($ch);
-
-// Output from server is json formatted, PHP will turn it into an object for us.
-$TOKEN_REQUEST_RESPONSE = json_decode($output);
-$TOKEN = urlencode($TOKEN_REQUEST_RESPONSE->access_token);
+// Try to get an access token using the authorization code grant.
+try {
+  $accessToken = $provider->getAccessToken('authorization_code', [
+ 	'code' => $code,
+  ]);
+} catch (\Exception $e) {
+  // Log the error.
+  throw $e;
+}
+$TOKEN = urlencode($accessToken->getToken());
 
 // Build our API endpoint request with the token we've received.
 $FULL_API_REQUEST="$API_REQUEST?access_token=$TOKEN";
