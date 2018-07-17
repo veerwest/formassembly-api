@@ -114,6 +114,7 @@ additional parameters:
 + date_to: end date for export range
 + filter: if set to 'all', export will include both completed and incomplete responses
 + response_ids: set of comma delimited response ids to retrieve
++ flag: starred is `1`, unstarred is `` (blank)
 
 examples:
 + https://app.formassembly.com/api_v1/responses/export/1.csv?date_form=01/01/2012&date_to=01/01/2013&filter=all
