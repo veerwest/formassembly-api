@@ -168,8 +168,8 @@ Returns a list of all forms in the FormAssembly instance. Only accessible if usi
 Returns a list of the forms in the user's account, along with associated metadata.
 
 ##### View
- + https://app.formassembly.com/admin/api_v1/forms/view/#FORMID#.json
- + https://app.formassembly.com/admin/api_v1/forms/view/#FORMID#.xml
+ + https://app.formassembly.com/api_v1/forms/view/#FORMID#.json
+ + https://app.formassembly.com/api_v1/forms/view/#FORMID#.xml
 
 ##### Additional Parameters
 + `raw`: Bypass form XML element whitelisting.
