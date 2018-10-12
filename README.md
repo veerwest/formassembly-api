@@ -231,11 +231,13 @@ Delete form.  Expects the additional parameters listed above to be sent as POST.
 + https://app.formassembly.com/api_v1/responses/export/#FORMID#.xml
 + https://app.formassembly.com/api_v1/responses/export/#FORMID#.zip
 
-##### Additional Parameters
-+ `date_from`: Start date for export range.
-+ `date_to`: End date for export range.
-+ `filter`: If set to `all`, export will include both completed and incomplete responses. If not present, only completed responses will be returned.
-+ `response_ids`: Set of comma-delimited response IDs to retrieve.
+additional parameters:
++ date_from: start date for export range
++ date_to: end date for export range
++ filter: if set to 'all', export will include both completed and incomplete responses. If not present, only completed responses will be returned.
++ response_ids: set of comma delimited response ids to retrieve
++ flag: starred is `1`, unstarred is `` (blank)
+
 
 ##### Examples
 + https://app.formassembly.com/api_v1/responses/export/1.csv?date_from=01/01/2012&date_to=01/01/2013&filter=all
