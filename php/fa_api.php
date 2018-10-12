@@ -1,8 +1,8 @@
 <?php
 
 // Values we'll need through the process
-$CLIENT_ID="xxxx"; // Issued by FormAssembly host
-$CLIENT_SECRET="xxxx"; // Issued by FormAssembly host
+$CLIENT_ID=htmlspecialchars("xxxx"); // Issued by FormAssembly host
+$CLIENT_SECRET=htmlspecialchars("xxxx"); // Issued by FormAssembly host
 // Auto generate our return url for wherever this page is located.
 $RETURN_URL= (!empty($_SERVER['HTTPS'])) ? "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] : "http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 // Replace xxxxxx with correct url

@@ -42,7 +42,7 @@ AUTH_URI="$AUTH_ENDPOINT?type=web&client_id=$CLIENT_ID&redirect_uri=$RETURN_URL&
 
 ## Just display the url to the user since we're doing this on the command line
 echo "Go to URL: $AUTH_URI"
-echo -e "When directed to https://localhost/?code=XXXXXXXXXX copy and paste code here:\n"
+echo -e "When directed to https://localhost/?code=XXXXXXXXXX copy and paste code here: (do not include the ending #)\n"
 read -p "code>" CODE
 
 ## Use the code received above to generate the server-side access token request
