@@ -53,7 +53,7 @@ TOKEN_RESULTS="`curl --silent --show-error --data $TOKEN_REQUEST_DATA --request 
 echo -e "\n$TOKEN_RESULTS"
 ## Do some string manip crazyness to pull the access_token value out of the json response.
 ##No json parser in bash.
-TOKEN="`echo $TOKEN_RESULTS | grep -o \"\\"access_token\\":\\"[a-zA-Z0-9\\\/\+\%]\+\\"\" | sed \"s/\\"access_token\\"://i\" | sed "s/\\"//g\" | sed \"s/\\\\\\\\\//\//g\"`"
+TOKEN="`echo $TOKEN_RESULTS | grep -o \"\\"access_token\\":\\"[a-zA-Z0-9\\\/\+\%]\+\\"\" | sed \"s/\\"access_token\\"://\" | sed "s/\\"//g\" | sed \"s/\\\\\\\\\//\//g\"`"
 TOKEN="`urlencode $TOKEN`"
 echo -e "Token: $TOKEN\n"
 
