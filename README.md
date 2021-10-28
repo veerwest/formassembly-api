@@ -17,7 +17,6 @@ The **endpoint**, in API parlance, is the destination URL for your API requests.
 | FormAssembly Developer Sandbox | https://developer.formassembly.com/api_v1/ | For development and testing only |
 | FormAssembly.com | https://app.formassembly.com/api_v1/ | |
 | FormAssembly Enterprise Cloud | https://instance_name.tfaforms.net/api_v1/   | Adjust `instance_name` as needed |
-| FormAssembly Enterprise On-Site | https://your_server/path/to/formassembly/api_v1/  | Adjust `your_server` and `path` as needed |
 
 From this point on, we'll use the FormAssembly.com endpoint. Just remember to adjust the URIs to match your own FormAssembly edition.
 
