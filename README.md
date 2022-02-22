@@ -178,8 +178,8 @@ the returned output to be exactly the content stored by FormAssembly including o
 internal fields.  Generally you should not use the `raw` parameter.
 
 ##### Create
- + https://app.formassembly.com/admin/api_v1/forms/create.json
- + https://app.formassembly.com/admin/api_v1/forms/create.xml
+ + https://app.formassembly.com/api_v1/forms/create.json
+ + https://app.formassembly.com/api_v1/forms/create.xml
 
 ##### Additional Parameters (POST only)
 + `xml_data`: xml data formatted per FormAssembly's schema.  See output of api_v1/forms/view.
@@ -190,8 +190,8 @@ internal fields.  Generally you should not use the `raw` parameter.
 Create a new form.  Expects the additional parameters listed above to be sent as POST.
 
 ##### Edit
- + https://app.formassembly.com/admin/api_v1/forms/edit/#FORMID#.json
- + https://app.formassembly.com/admin/api_v1/forms/edit/#FORMID#.xml
+ + https://app.formassembly.com/api_v1/forms/edit/#FORMID#.json
+ + https://app.formassembly.com/api_v1/forms/edit/#FORMID#.xml
 
 ##### Additional Parameters (POST only)
 + `id`: id for existing form.
@@ -203,8 +203,8 @@ Create a new form.  Expects the additional parameters listed above to be sent as
 Send update to form code.  Expects the additional parameters listed above to be sent as POST.
 
 ##### Delete
- + https://app.formassembly.com/admin/api_v1/forms/delete/#FORMID#.json
- + https://app.formassembly.com/admin/api_v1/forms/delete/#FORMID#.xml
+ + https://app.formassembly.com/api_v1/forms/delete/#FORMID#.json
+ + https://app.formassembly.com/api_v1/forms/delete/#FORMID#.xml
 
 ##### Additional Parameters (POST only)
 + `id`: id for existing form.
