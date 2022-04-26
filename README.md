@@ -2,9 +2,9 @@
 
 ### Introduction
 
-[FormAssembly.com](http://formassembly.com) is a web-based form management solution that allows anyone to easily create online forms and collect data. FormAssembly is available in different flavors, cloud-hosted (SaaS) or on-premises, and all editions provide a secure REST API for interacting with user accounts and exporting data.
+[FormAssembly.com](https://formassembly.com) is a web-based form management solution that allows anyone to easily create online forms and collect data. FormAssembly is available in different flavors, cloud-hosted (SaaS) or on-premises, and all editions provide a secure REST API for interacting with user accounts and exporting data.
 
-Before you can start building an application using the FormAssembly API, check out the [FormAssembly Developer Hub](http://www3.formassembly.com/api/) for information on how to register, obtain a CLIENT_ID, and get access to a sandbox.
+Before you can start building an application using the FormAssembly API, check out the [FormAssembly Developer Hub](https://www.formassembly.com/api/) for information on how to register, obtain a CLIENT_ID, and get access to a sandbox.
 
 ***
 
@@ -24,13 +24,13 @@ From this point on, we'll use the FormAssembly.com endpoint. Just remember to ad
 
 ### Registration
 
-Before you can interact with the API, you must obtain a `CLIENT_ID` and a `CLIENT_SECRET` code. This is done by completing the registration process on the particular instance you are targeting. For the Developer Sandbox and FormAssembly.com, you must register through the [FormAssembly Developer Hub](http://www3.formassembly.com/api/). For Enterprise instances, the FormAssembly administrator can register your app.
+Before you can interact with the API, you must obtain a `CLIENT_ID` and a `CLIENT_SECRET` code. This is done by completing the registration process on the particular instance you are targeting. For the Developer Sandbox and FormAssembly.com, you must register through the [FormAssembly Developer Hub](https://www.formassembly.com/api/). For Enterprise instances, the FormAssembly administrator can register your app.
 
 ***
 
 ### Authorization
 
-**Authorization** is the mechanism that lets FormAssembly users decide which applications can access their account through the API. Authorizations are handled using the [OAuth2](http://oauth.net/2/) protocol.
+**Authorization** is the mechanism that lets FormAssembly users decide which applications can access their account through the API. Authorizations are handled using the [OAuth2](https://oauth.net/2/) protocol.
 
 If you're not familiar with OAuth2 interactions, it can be helpful to look at the documentation of other APIs, [such as this one for the Google API](https://developers.google.com/accounts/docs/OAuth2), explaining how OAuth2 works in detail.
 
@@ -142,13 +142,13 @@ Several output formats are accepted. See [Formats](#formats) for more details.
 
 FormAssembly supports returning data in two main formats:
 
-  + [json](http://en.wikipedia.org/wiki/Json): A lightweight data exchange format supported by newer languages.  Directly parsable by JavaScript.
-  + [xml](http://en.wikipedia.org/wiki/XML): An industry standard data exchange format, parsable by almost all languages.
+  + [json](https://en.wikipedia.org/wiki/Json): A lightweight data exchange format supported by newer languages.  Directly parsable by JavaScript.
+  + [xml](https://en.wikipedia.org/wiki/XML): An industry standard data exchange format, parsable by almost all languages.
 
 Some endpoints support additional formats, including:
-  + [plist](http://en.wikipedia.org/wiki/Plist): Used to provide Apple consumable data for Objective-C applications.
-  + [csv](http://en.wikipedia.org/wiki/Comma-separated_values): Used as a standard record data exchange format.
-  + [zip](http://en.wikipedia.org/wiki/ZIP_(file_format\)): A binary data container format.
+  + [plist](https://en.wikipedia.org/wiki/Plist): Used to provide Apple consumable data for Objective-C applications.
+  + [csv](https://en.wikipedia.org/wiki/Comma-separated_values): Used as a standard record data exchange format.
+  + [zip](https://en.wikipedia.org/wiki/ZIP_(file_format\)): A binary data container format.
 
 ***
 
@@ -387,7 +387,7 @@ Trigger a reset of the aggregate data counters (unread, read, saved, etc.) that 
 
 Object | Description | Example
 ---: | --- | :---
-"id":"XXXX" | Unique integer value identifying the form within the FormAssembly instance. Every form has a single unique ID in the form of an integer. Can be used to construct a valid form URL, e.g., http://app.formassembly.com/forms/view/XXXX | 1
+"id":"XXXX" | Unique integer value identifying the form within the FormAssembly instance. Every form has a single unique ID in the form of an integer. Can be used to construct a valid form URL, e.g., https://app.formassembly.com/forms/view/XXXX | 1
 "version_id":"XXXX" | Unique integer ID identifying the current version (revision) of the form. | 1
 "name":"XXXXXXXX" | HTML-encoded string representing the form's name as displayed in the user's FormAssembly form index list. Not to be confused with the Form Title, found in the form's XML definition. | "Mine &amp; Yours Form"
 "category":"XXXX", | String representing one of the system-wide default form organizational categories. Can be an empty string for uncategorized forms. | "Contact Forms"
