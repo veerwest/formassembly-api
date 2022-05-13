@@ -195,10 +195,11 @@ Create a new form.  Expects the additional parameters listed above to be sent as
 
 ##### Additional Parameters (POST only)
 + `id`: id for existing form.
-+ `xml_data`: xml data formatted per FormAssembly's schema.  See output of api_v1/forms/view.
++ `xml_data`: xml data as a string formatted per FormAssembly's schema.  See output of api_v1/forms/view.
 + `builder_version`: string identifier, e.g. "3.4.2","4.0.0","4.0.1","4.1.0","4.2.0".
 + `language`: iso language code, e.g. "en-US","fr","zh-CN"
 + `name`: string text of the preferred internal application display name.
++ `display_status`: integer specifying whether or not the form is active or archived
 
 Send update to form code.  Expects the additional parameters listed above to be sent as POST.
 
